@@ -36,18 +36,16 @@ function Timer({ timeGoal }) {
   });
 
   return (
-    <div>
-      <div className="timer">
-        {calculatedTime.length > 0
-          ? calculatedTime.map((item) => {
-              return (
-                <span key={item.id} id={item.id}>
-                  {item.value} {item.value !== 1 ? `${item.id}s` : item.id}{' '}
-                </span>
-              );
-            })
-          : "Time's up!"}
-      </div>
+    <div className="timer">
+      {calculatedTime.length > 0
+        ? calculatedTime.map((item) => {
+            return (
+              <span key={item.id} id={item.id}>
+                {item.value} {item.value !== 1 ? `${item.id}s` : item.id}{' '}
+              </span>
+            );
+          })
+        : "Time's up!"}
     </div>
   );
 }

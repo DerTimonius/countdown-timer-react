@@ -4,8 +4,6 @@ import AddGoal from './components/AddGoal';
 import Goals from './components/Goals';
 import Timer from './components/Timer';
 
-// import AddTime from './components/AddTime';
-
 function App() {
   const [goals, setGoals] = useState([
     {
@@ -38,7 +36,7 @@ function App() {
       <Timer timeGoal={timeGoal} />
       <h1>Choose your goal!</h1>
       <Goals goals={goals} onChange={changeCountdown} onDelete={deleteGoal} />
-      <AddGoal onAdd={addGoal} />
+      <AddGoal onAdd={addGoal} nameClass="form" />
     </div>
   );
 }

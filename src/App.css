@@ -1,49 +1,60 @@
-@import url(https://fonts.google.com/specimen/Indie+Flower);
+:root {
+  --border: 1px solid white;
+}
 
 body {
   text-align: center;
-  font-family: 'Indie Flower', cursive;
+  font-family: Roboto, sans-serif;
   color: white;
-  background-color: black;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(90, 92, 106, 1) 0%,
+    rgba(32, 45, 58, 1) 81.3%
+  );
 }
 div {
   display: inline-block;
-  line-height: 1;
   padding: 20px;
-  font-size: 40px;
+  font-size: 32px;
 }
 span {
   display: block;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 }
 h1 {
-  font-size: 75px;
+  font-size: 64px;
 }
 .timer {
   padding: 10px;
   display: flex;
   flex-direction: row;
+  gap: 60px;
 }
 #year {
   font-size: 125px;
   color: #b43d38;
+  width: 5ch;
 }
 #day {
   font-size: 100px;
   color: #db4844;
+  width: 4ch;
 }
 #hour {
   font-size: 75px;
   color: #f07c22;
+  width: 5ch;
 }
 #minute {
   font-size: 50px;
   color: #f6da74;
+  width: 7ch;
 }
 #second {
   font-size: 25px;
   color: #abcd58;
+  width: 7ch;
 }
 .button {
   appearance: none;
@@ -59,6 +70,8 @@ h1 {
   font-weight: 600;
   line-height: 20px;
   padding: 6px 16px;
+  margin: 8px;
+  width: 160px;
 }
 
 .button:hover {
@@ -69,4 +82,31 @@ h1 {
 }
 .btn-del:hover {
   background-color: rgb(222, 47, 16);
+}
+
+.goals {
+  border: var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(62, 111, 161, 0.15);
+}
+
+form {
+  padding: 10px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--border);
+  border-radius: 12px;
+  font-size: 20px;
+  background-color: rgba(62, 111, 161, 0.15);
+}
+input {
+  font-size: inherit;
+  font-family: inherit;
+  width: 300px;
+  height: 32px;
+  font-size: 24px;
 }

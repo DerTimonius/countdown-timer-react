@@ -19,35 +19,30 @@ function AddGoal({ onAdd }) {
         onAdd(newGoal);
       }}
     >
-      <div>
-        <label htmlFor="id">Your goal</label>
-        <input
-          name="id"
-          id="id"
-          value={goalName}
-          onChange={(event) => setGoalName(event.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="day">Day</label>
-        <input
-          type="date"
-          name="day"
-          id="day"
-          value={goalDay}
-          onChange={(event) => setGoalDay(event.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="time">Time</label>
-        <input
-          type="time"
-          name="time"
-          id="time"
-          value={goalTime}
-          onChange={(event) => setGoalTime(event.target.value)}
-        />
-      </div>
+      <label htmlFor="id">Your goal</label>
+      <input
+        name="id"
+        id="id"
+        value={goalName}
+        onChange={(event) => setGoalName(event.target.value)}
+      />
+      <label htmlFor="day">Day</label>
+      <input
+        type="date"
+        name="day"
+        id="goalDay"
+        value={goalDay}
+        onChange={(event) => setGoalDay(event.target.value)}
+      />
+
+      <label htmlFor="time">Time</label>
+      <input
+        type="time"
+        name="time"
+        id="time"
+        value={goalTime}
+        onChange={(event) => setGoalTime(event.target.value)}
+      />
       <input type="submit" value="Save Countdown" className="button" />
     </form>
   );

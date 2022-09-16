@@ -36,8 +36,8 @@ function displayDate(date, time) {
   } else {
     daySuffixed = `${goalDay}th`;
   }
-  const output = `${daySuffixed} of ${months[goalMonth]} ${goalYear}`;
-  return goalTime === '00:00' ? output : `${output}, ${goalTime}`;
+  const output = `${daySuffixed} of ${months[goalMonth]} ${goalYear}, ${goalTime}`;
+  return output;
 }
 
 export { displayDate, getDate };

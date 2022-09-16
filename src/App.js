@@ -18,7 +18,6 @@ function App() {
   const [goalId, setGoalId] = useState('New Year');
 
   const addGoal = (newGoal) => {
-    console.log(newGoal);
     setGoals([...goals, newGoal]);
   };
 
